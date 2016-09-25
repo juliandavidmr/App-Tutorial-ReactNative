@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 
 import {View, Text, StyleSheet, TouchableHighlight} from 'react-native';
 
+import CustomComponent from './components/CustomComponent.js'
+
 class Categorias extends Component {
 
   render() {
@@ -10,7 +12,18 @@ class Categorias extends Component {
         <Text style={styles.largeText}>
           Navegando a la segunda vista
         </Text>
-        <CustomComponent message="Con aptitud" />
+        <CustomComponent
+          message="Con Amor"
+          objects={{
+            "Objeto1": "Este es el objeto 1",
+            "Objeto2": "Este es el objeto 2"
+          }}
+          array={[
+            "Item 1",
+            "Item 2",
+            "Item 3"
+          ]}
+        />
       </View>
     );
   }

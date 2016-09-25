@@ -15,7 +15,19 @@ class CustomComponent extends React.Component {
         <View style={styles.container}>
           <Text style={styles.attitude}>
             {
-              this.props.message              
+              this.props.message
+            }
+          </Text>
+          <Text style={styles.attitude}>
+            {
+              this.props.objects.Objeto1
+            }
+          </Text>
+          <Text style={styles.attitude}>
+            {
+              this.props.array.map(item => {
+                return item;
+              })
             }
           </Text>
         </View>
@@ -24,7 +36,17 @@ class CustomComponent extends React.Component {
 }
 
 const styles = StyleSheet.create({
-
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  attitude: {
+    fontStyle: 'italic',
+    fontFamily: 'Georgia',
+    fontSize: 26,
+    color: '#173e43'
+  }
 });
 
 export default CustomComponent;

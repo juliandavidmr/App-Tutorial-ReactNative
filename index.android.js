@@ -29,7 +29,7 @@ class App extends Component {
         )
       case 'Categorias':
         return (
-          <Categorias  navigator={navigator} title="Categorias" />
+          <Categorias navigator={navigator} title="Categorias" />
         )
     }
   }
