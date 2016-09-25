@@ -35,6 +35,12 @@ class CustomComponent extends React.Component {
     }
 }
 
+CustomComponent.propTypes = {
+  message: React.PropTypes.string.isRequired,
+  objects: React.PropTypes.object.isRequired,
+  array: React.PropTypes.array.isRequired
+}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
