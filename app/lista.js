@@ -1,32 +1,43 @@
 import React, { Component } from 'react';
 
-import { 
-    View, 
-    Text, 
-    StyleSheet, 
+import {
+    View,
+    Text,
+    StyleSheet,
     TouchableHighlight
 } from 'react-native';
 
 class Listar extends Component {
 
-    onButtonPress() {
-        this.props.navigator.push({
-            id: 'Categorias'
-        });
-    }
+  onButtonPress() {
+    this.props.navigator.push({
+        id: 'Categorias'
+    });
+  }
 
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text style={styles.largeText}>Hice mi primer vista y tiene un boton</Text>
-                <TouchableHighlight
-                    onPress={this.onButtonPress.bind(this)} 
-                    style={styles.button}>
-                    <Text style={styles.buttonText}>Esto no hace nada</Text>
-                </TouchableHighlight>
-            </View>
-        );
-    }
+  onButtonPressInput() {
+    this.props.navigator.push({
+        id: 'InputState'
+    });
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+          <Text style={styles.largeText}>Hice mi primer vista y un boton</Text>
+          <TouchableHighlight
+              onPress={this.onButtonPress.bind(this)}
+              style={styles.button}>
+              <Text style={styles.buttonText}>Esto hace algo</Text>
+          </TouchableHighlight>
+          <TouchableHighlight
+              onPress={this.onButtonPressInput.bind(this)}
+              style={styles.button2}>
+              <Text style={styles.buttonText}>Esto otro no hace nada</Text>
+          </TouchableHighlight>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
@@ -48,10 +59,15 @@ const styles = StyleSheet.create({
     button: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center',
         alignSelf: 'stretch',
         backgroundColor: "#3fb0ac"
-    },	
+    },
+    button2: {
+        flex: 2,
+        justifyContent: 'center',
+        alignSelf: 'stretch',
+        backgroundColor: "#3fb0ac"
+    },
     buttonText: {
         flex: 1,
         fontFamily: 'HelveticaNeue-CondensedBold',

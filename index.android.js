@@ -16,6 +16,7 @@ import {
 
 import Listar from './app/lista';
 import Categorias from './app/categorias.js';
+import InputState from './app/input_state.js';
 
 class App extends Component {
 
@@ -30,6 +31,10 @@ class App extends Component {
       case 'Categorias':
         return (
           <Categorias navigator={navigator} title="Categorias" />
+        )
+      case 'InputState':
+        return (
+          <InputState />
         )
     }
   }
